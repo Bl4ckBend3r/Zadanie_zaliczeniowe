@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #1f2041;
+  }
+  
+  .navupper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #adb6c4;
+  }
+  
+  .logo .capital {
+    color: #d4af37; 
+}
+  
+
+  .navbarlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbarlinks a:hover {
+    color: #adb6c4;; 
+  }
+  
+
+  .titlename {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .titlename h1 {
+    font-family: "League Gothic", sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+  }
+  
+  .titlename span {
+    display: block;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    color: #adb6c4; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .navupper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbarlinks a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .titlename h1 {
+      font-size: 3rem;
+    }
+  
+    .titlename span {
+      font-size: 1.2rem;
+    }
+  }
+  

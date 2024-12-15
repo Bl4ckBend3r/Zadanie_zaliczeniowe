@@ -1,0 +1,55 @@
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #1f2041;
+    padding: 20px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  .ftrlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+  .ftrlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .ftrlinks a:hover {
+    color: #adb6c4; 
+  }
+  
+
+  .ftrcontact {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+  
+  .ftrcontact .logo {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #adb6c4;
+  }
+  
+  .logo .capital {
+    color: #d4af37; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ftrcontact {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
