@@ -1,12 +1,118 @@
 @import url(./navbar.css);
 @import "./footer.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-body {
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #030303;
+  line-height: 1.5;
+}
+.photo_and_text {
+  width: 958px;
+  height: 755.78px;
+  gap: 65px;
+  opacity: 0px;
+}
+.photo_and_text p {
+  font-family: "Roboto", sans-serif;
+}
+.photo_and_text h3 {
+  font-family: "League Spartan", sans-serif;
+}
+.skill_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 956.8px;
+  height: 172px;
+  top: 207.78px;
+  left: 1.2px;
+  gap: 0px;
+  justify-content: space-between;
+  opacity: 0px;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #adb6c4;
+  color: #1f2041;
+}
 
-    background-color: #fff; 
-    color: #030303;
-    line-height: 1.5;
+.contact {
+    width: 80%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  .contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #d4af37;
+    font-weight: bold;
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .inputs input {
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #adb6c4;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputs input::placeholder {
+    color: #adb6c4;
+  }
+  
+  .inputs input:focus {
+    border-bottom: 2px solid #d4af37;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #d4af37;
+    color: #1f2041;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e0c278;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .inputs input {
+      font-size: 0.9rem;
+    }
   }
