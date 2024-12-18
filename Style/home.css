@@ -1,0 +1,107 @@
+.skills_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 958px;
+  height: 226px;
+  padding: 0px;
+  gap: 0px;
+  opacity: 0px;
+  margin: 0 auto;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill img {
+  width: 60px;
+  height: auto;
+}
+
+.skill .skills_info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.skill h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill .rating {
+  display: flex;
+  gap: 4px;
+}
+
+.skill .rating span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.skill .rating span.active {
+  background-color: #333;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .skills_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills_list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.carousel-control {
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.hidden {
+  display: none !important; 
+}
+
+.visible {
+  display: block;
+}

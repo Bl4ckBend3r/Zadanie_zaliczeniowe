@@ -1,130 +1,116 @@
 @import url(./navbar.css);
-@import "./footer.css";
+@import url(./footer.css);
 @import url(./project.css);
+@import url(./home.css);
+@import url(./contact.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
 .main {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 40px;
+  padding: 20px;
 }
-body {
-  background-color: #fff;
-  color: #030303;
-  line-height: 1.5;
-}
+
 .photo_and_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
   width: 958px;
   height: 755.78px;
   gap: 65px;
-  opacity: 0px;
 }
-.photo_and_text p {
-  font-family: "Roboto", sans-serif;
+h2 { color: #1F2041;
+  font-family: League Spartan;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
-.photo_and_text h3 {
-  font-family: "League Spartan", sans-serif;
+p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #1F2041;
 }
-.skill_list {
-  display: block;
-  direction: row;
-  align-items: center;
-  width: 956.8px;
-  height: 172px;
-  top: 207.78px;
-  left: 1.2px;
-  gap: 0px;
-  justify-content: space-between;
-  opacity: 0px;
-}
-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background: #adb6c4;
-  color: #1f2041;
+.photo img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.contact {
-    width: 80%;
-    max-width: 700px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
+.text {
+  max-width: 100%;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #adb6c4;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #adb6c4;
+}
+
+input:focus {
+  border-bottom: 2px solid #d4af37;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #adb6c4;
+  box-shadow: 0px 4px 4px 0px #dddddd40;
+  color: #1f2041;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7a8088;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 95%;
+    padding: 20px;
   }
-  
-  .contact h3 {
-    align-items: center;
-    text-align: left;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #1F2041;
-    font-weight: bold;
-  }
-  
-  .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
+
   .inputs input {
-    padding: 12px;
-    border: none;
-    border-bottom: 2px solid #adb6c4;
-    background-color: transparent;
-    color: #fff;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
+    font-size: 0.9rem;
   }
-  
-  .inputs input::placeholder {
-    color: #adb6c4;
-  }
-  
-  .inputs input:focus {
-    border-bottom: 2px solid #d4af37;
-  }
-  .arrows button{
-    display: block;
-    align-items: center;
-    height: 60px;
-    width: 60px;
-  }
-    
-    button {
-      margin-top: 20px;
-      background-color: #adb6c4;
-      box-shadow: 0px 4px 4px 0px #dddddd40;
-      color: #1F2041;
-      border: none;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-  
-  button:hover {
-    background-color: #7a8088;
-  }
-  
-  @media (max-width: 768px) {
-    .contact {
-      width: 95%;
-      padding: 20px;
-    }
-  
-    .inputs input {
-      font-size: 0.9rem;
-    }
-  }
+}

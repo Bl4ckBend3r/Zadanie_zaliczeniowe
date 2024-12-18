@@ -19,7 +19,6 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  font-family: "Roboto", sans-serif;
 }
 
 .modal-content h2 {
@@ -37,8 +36,6 @@
 .modal-content input {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   margin-bottom: 10px;
 }
 
@@ -56,19 +53,16 @@
 }
 
 button#addProjectBtn {
-  background-color: #4a4e69;
-  color: white;
-  border: none;
   padding: 10px 20px;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+}
+.projects {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content:flex-start; 
 }
 
-button#addProjectBtn:hover {
-  background-color: #22223b;
-}
 
 .project {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
@@ -87,6 +81,7 @@ button#addProjectBtn:hover {
   margin: 20px;
   font-size: 20px;
   font-weight: 700;
+  color: #F1EBE1;
 }
 
 .project ul {
