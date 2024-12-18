@@ -1,0 +1,123 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(249, 249, 249, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+button#addProjectBtn {
+  background-color: #4a4e69;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button#addProjectBtn:hover {
+  background-color: #22223b;
+}
+
+.project {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+    url("../Photos/projects.png") no-repeat center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 360px;
+  height: 460px;
+  border-radius: 16px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.project h2 {
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.project ul {
+  margin: 0px 40px 0px;
+  list-style: circle;
+}
+
+.project ul li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.add_project button {
+  background-color: #adb6c4;
+  box-shadow: 0px 4px 4px 0px #dddddd40;
+  color: #1F2041;
+  border: none;
+  width: 240px;
+  height: 60px;
+  padding: 15px 49px 15px 49px;
+  gap: 24px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.add_project button:hover {
+  background-color: #7a8088;
+}
