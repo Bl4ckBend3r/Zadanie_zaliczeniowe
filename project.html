@@ -7,16 +7,16 @@
   </head>
   <body>
     <div class="navbar">
-        <div class="navupper">
-            <div class="logo"><span class="capital">ITP</span>ortfolio</div>
-            <div class="navbarlinks">
-              <a href="./index.html">HOME</a>
-              <a href="./project.html">PROJECTS</a>
-              <a href="./about.html">ABOUT</a>
-              <a href="./contact.html">CONTACT</a>
-              <a href="./messages.html">MESSAGES</a>
-            </div>
-          </div>
+      <div class="navupper">
+        <div class="logo"><span class="capital">ITP</span>ortfolio</div>
+        <div class="navbarlinks">
+          <a href="./index.html">HOME</a>
+          <a href="./project.html">PROJECTS</a>
+          <a href="./about.html">ABOUT</a>
+          <a href="./contact.html">CONTACT</a>
+          <a href="./messages.html">MESSAGES</a>
+        </div>
+      </div>
       <div class="titlename">
         <h1>MY PROJECTS</h1>
         <span>MADE WITH LOVE</span>
@@ -26,7 +26,59 @@
       <div class="add_project">
         <button>+ Add project</button>
       </div>
-      <div class="projects"></div>
+    </div>
+    <div id="projectModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Add New Project</h2>
+        <label for="projectTitle">Project title</label>
+        <input
+          type="text"
+          id="projectTitle"
+          placeholder="Enter project title"
+        />
+
+        <label for="technologies">Technologies</label>
+        <input
+          type="text"
+          id="technologies"
+          placeholder="e.g., HTML, CSS, JavaScript"
+        />
+
+        <button id="addProjectBtn">Add project</button>
+      </div>
+    </div>
+    <div class="projects">
+      <div class="project">
+        <h2>Calculator</h2>
+        <ul>
+          <li>HTML</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h2>Non-governmental organization</h2>
+        <ul>
+          <li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h2>Calculator Program</h2>
+        <ul>
+          <li>Javascript</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h2>Calculator</h2>
+        <ul>
+          <li>HTML</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h2>Non-governmental organization</h2>
+        <ul>
+          <li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
     </div>
     <div class="footer">
       <div class="ftrlinks">
@@ -38,8 +90,11 @@
       </div>
       <div class="ftrcontact">
         jan_kowalski@gmail.com +123 456 789
-        <div class="logo"><span class="capital">ITP</span>ortfolio &#169; 2024</div>
+        <div class="logo">
+          <span class="capital">ITP</span>ortfolio &#169; 2024
+        </div>
       </div>
     </div>
+    <script src="./Script/script.js" type="module"></script>
   </body>
 </html>
