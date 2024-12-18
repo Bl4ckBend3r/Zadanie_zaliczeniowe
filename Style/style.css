@@ -1,27 +1,21 @@
 @import url(./navbar.css);
 @import "./footer.css";
-<<<<<<< HEAD
-=======
 @import url(./project.css);
->>>>>>> d43b00a94a984ffa3040f79311fe767b0c9801bd
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-<<<<<<< HEAD
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-=======
+}
 body {
->>>>>>> d43b00a94a984ffa3040f79311fe767b0c9801bd
   background-color: #fff;
   color: #030303;
   line-height: 1.5;
 }
-<<<<<<< HEAD
 .photo_and_text {
   width: 958px;
   height: 755.78px;
@@ -35,8 +29,8 @@ body {
   font-family: "League Spartan", sans-serif;
 }
 .skill_list {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  direction: row;
   align-items: center;
   width: 956.8px;
   height: 172px;
@@ -66,10 +60,12 @@ button {
   }
   
   .contact h3 {
+    align-items: center;
+    text-align: left;
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #d4af37;
+    color: #1F2041;
     font-weight: bold;
   }
   
@@ -97,22 +93,29 @@ button {
   .inputs input:focus {
     border-bottom: 2px solid #d4af37;
   }
-  
-  button {
-    margin-top: 20px;
-    background-color: #d4af37;
-    color: #1f2041;
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  .arrows button{
+    display: block;
+    align-items: center;
+    height: 60px;
+    width: 60px;
   }
+    
+    button {
+      margin-top: 20px;
+      background-color: #adb6c4;
+      box-shadow: 0px 4px 4px 0px #dddddd40;
+      color: #1F2041;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
   
   button:hover {
-    background-color: #e0c278;
+    background-color: #7a8088;
   }
   
   @media (max-width: 768px) {
@@ -125,6 +128,3 @@ button {
       font-size: 0.9rem;
     }
   }
-=======
-
->>>>>>> d43b00a94a984ffa3040f79311fe767b0c9801bd
