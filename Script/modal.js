@@ -7,19 +7,18 @@ export function initModal() {
   const technologiesInput = document.getElementById("technologies");
   const projectsContainer = document.querySelector(".projects");
 
-  if (
-    !addProjectBtn ||
-    !modal ||
-    !closeModalBtn ||
-    !addProjectConfirmBtn ||
-    !projectTitleInput ||
-    !technologiesInput ||
-    !projectsContainer
-  ) {
-    console.error(
-      "One or more modal elements not found. Check your HTML structure."
-    );
-    return;
+  function createProject(title, technologies) {
+    const projectElement = document.createElement("div");
+    projectElement.classList.add("project");
+    projectElement.innerHTML = `
+          <h2>${title}</h2>
+          <ul>
+              ${technologies.map((tech) => `<li>${tech.trim()}</li>`).join("")}
+          </ul>
+          <img src="./Photos/Trash.png" class="trash-icon" alt="Delete" />
+      `;
+    projectsContainer.appendChild(projectElement);
+    console.log(`Project "${title}" added successfully.`);
   }
 
   addProjectBtn.addEventListener("click", () => {
@@ -32,25 +31,15 @@ export function initModal() {
 
   addProjectConfirmBtn.addEventListener("click", () => {
     const title = projectTitleInput.value.trim();
-    const technologies = technologiesInput.value.trim();
+    const technologies = technologiesInput.value.trim().split(",");
 
-    if (title && technologies) {
-      const newProject = document.createElement("div");
-      newProject.classList.add("project");
-      newProject.innerHTML = `
-          <h2>${title}</h2>
-          <ul>
-            ${technologies
-              .split(",")
-              .map((tech) => `<li>${tech.trim()}</li>`)
-              .join("")}
-          </ul>
-        `;
-
-      projectsContainer.appendChild(newProject);
+    if (title && technologies.length > 0) {
+      createProject(title, technologies);
       modal.style.display = "none";
       projectTitleInput.value = "";
       technologiesInput.value = "";
+    } else {
+      console.error("Please fill in all fields!");
     }
   });
 }

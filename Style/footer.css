@@ -1,12 +1,13 @@
 .footer {
     display: flex;
+    margin-top: 86px;
     justify-content: space-between; 
     align-items: center;
     background-color: #1f2041;
     padding: 20px;
     color: #fff;
     font-family: "Roboto", sans-serif;
-    
+    width: 1fr;
   }
   
   

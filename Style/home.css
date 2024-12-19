@@ -79,9 +79,10 @@
 .carousel {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  overflow: hidden;
+  justify-content: center;
+  width: 100%;
 }
-
 
 .carousel-controls {
   display: flex;
@@ -91,7 +92,7 @@
 }
 
 .carousel-control {
-
+  margin-top: 0%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -99,9 +100,9 @@
 }
 
 .hidden {
-  display: none !important; 
+  display: none !important;
 }
 
-.visible {
+.project.visible {
   display: block;
 }

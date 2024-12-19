@@ -1,75 +1,60 @@
-export function exportPoject() {
-  const carousel = document.querySelector(".carousel");
+export function initProjects() {
+  const projectsContainer = document.querySelector(".projects");
 
-  if (!carousel) {
-    console.error("Nie znaleziono elementu '.carousel' w DOM.");
+  if (!projectsContainer) {
+    console.error("Projects container not found!");
     return;
   }
 
-  fetch("./project.html")
-    .then((response) => {
-      if (!response.ok) throw new Error(`Błąd: ${response.statusText}`);
-      return response.text();
-    })
-    .then((html) => {
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = html;
+  const defaultProjects = [
+    { title: "Calculator", technologies: ["HTML"] },
+    { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+    { title: "Calculator Program", technologies: ["JavaScript"] },
+    { title: "Calculator", technologies: ["HTML"] },
+    { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+  ];
 
-      const projectElements = tempDiv.querySelectorAll(".project");
-      if (projectElements.length === 0) {
-        console.warn("Brak elementów '.project' w pliku project.html.");
-      }
-
-      projectElements.forEach((project, index) => {
-        if (index < 3) {
-          project.classList.add("visible");
-        } else {
-          project.classList.add("hidden");
-        }
-        carousel.appendChild(project.cloneNode(true));
-      });
-
-      console.log("Projekty zostały załadowane.");
-      initializeCarouselControls(); 
-    })
-    .catch((error) => console.error("Błąd podczas ładowania projektów:", error));
-
-    function initializeCarouselControls() {
-      const prevBtn = document.querySelector(".carousel-control.prev");
-      const nextBtn = document.querySelector(".carousel-control.next");
-      const projects = document.querySelectorAll(".carousel .project");
-    
-      if (!prevBtn || !nextBtn || projects.length === 0) {
-        console.error("Brak elementów kontrolnych lub projektów.");
-        return;
-      }
-    
-      let startIndex = 0; 
-      const visibleCount = 3;
-    
-      const updateVisibleProjects = () => {
-        projects.forEach((project, index) => {
-          if (index >= startIndex && index < startIndex + visibleCount) {
-            project.classList.add("visible");
-            project.classList.remove("hidden");
-          } else {
-            project.classList.add("hidden");
-            project.classList.remove("visible");
-          }
-        });
-      };
-    
-      prevBtn.addEventListener("click", () => {
-        startIndex = (startIndex - visibleCount + projects.length) % projects.length;
-        updateVisibleProjects();
-      });
-    
-      nextBtn.addEventListener("click", () => {
-        startIndex = (startIndex + visibleCount) % projects.length;
-        updateVisibleProjects();
-      });
-    
-      updateVisibleProjects(); 
-    }
-    
+  function createProjectElement(project) {
+    const projectElement = document.createElement("div");
+    projectElement.classList.add("project");
+    projectElement.innerHTML = `
+        <h2>${project.title}</h2>
+        <ul>
+          ${project.technologies.map((tech) => `<li>${tech}</li>`).join("")}
+        </ul>
+        <div class="project-actions">
+          <img src="./Photos/Trash.png" class="trash-icon" alt="Delete" />
+        </div>
+      `;
+    return projectElement;
   }
+
+  function loadDefaultProjects() {
+    defaultProjects.forEach((project) => {
+      const projectElement = createProjectElement(project);
+      projectsContainer.appendChild(projectElement);
+    });
+  }
+
+  function handleProjectActions(event) {
+    if (event.target.classList.contains("trash-icon")) {
+      const projectElement = event.target.closest(".project");
+      if (projectElement) {
+        projectElement.remove();
+        console.log("Project removed.");
+      }
+    }
+  }
+
+  projectsContainer.addEventListener("click", handleProjectActions);
+  loadDefaultProjects();
+}
+export function getDefaultProjects() {
+  return [
+    { title: "Calculator", technologies: ["HTML"] },
+    { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+    { title: "Calculator Program", technologies: ["JavaScript"] },
+    { title: "Calculator", technologies: ["HTML"] },
+    { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+  ];
+}

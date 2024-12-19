@@ -24,6 +24,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
+  margin-top: 84px;
   flex-direction: column;
   align-items: center;
   gap: 40px;
@@ -35,11 +36,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  width: 958px;
-  height: 755.78px;
-  gap: 65px;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 04px;
 }
-h2 { color: #1F2041;
+h2 {
+  color: #1f2041;
   font-family: League Spartan;
   font-size: 32px;
   font-weight: 700;
@@ -49,6 +51,7 @@ h2 { color: #1F2041;
   text-decoration-skip-ink: none;
 }
 p {
+  margin-top: 20px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -56,23 +59,34 @@ p {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #1F2041;
+  color: #1f2041;
 }
 .photo img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
 .text {
-  max-width: 100%;
+  margin-top: 65px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 12px;
   border: none;
   border-bottom: 2px solid #adb6c4;
   background-color: transparent;
-  color: #fff;
+  color: #1F2041;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
@@ -87,12 +101,11 @@ input:focus {
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 84px;
+  padding: 10px 20px;
   background-color: #adb6c4;
-  box-shadow: 0px 4px 4px 0px #dddddd40;
   color: #1f2041;
-  border: none;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   cursor: pointer;

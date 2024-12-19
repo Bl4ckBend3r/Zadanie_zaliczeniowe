@@ -1,52 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./Style/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact</title>
   </head>
   <body>
-    <div class="navbar">
-      <div class="navupper">
-        <div class="logo"><span class="capital">ITP</span>ortfolio</div>
-        <div class="navbarlinks">
-          <a href="./index.html">HOME</a>
-          <a href="./project.html">PROJECTS</a>
-          <a href="./about.html">ABOUT</a>
-          <a href="./contact.html">CONTACT</a>
-          <a href="./messages.html">MESSAGES</a>
-        </div>
-      </div>
-      <div class="titlename">
-        <h1>CONTACT ME</h1>
-        <span>SAY HELLO TO ME</span>
-      </div>
-    </div>
+    <div id="navbar-placeholder"></div>
     <div class="main">
       <div class="contact">
         <h3>Contact Me</h3>
-        <div class="inputs">
-          <input type="text" placeholder="Your name" />
-          <input type="text" placeholder="email@example.com" />
-          <input type="text" placeholder="Hello, my name is . . ." />
-        </div>
-        <button>Send message</button>
+        <form id="contact-form">
+          <div class="inputs">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name" />
+            <div class="error-message hidden"></div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="email@example.com" />
+            <div class="error-message hidden"></div>
+            <label for="message">Message:</label>
+            <input type="text" id="message" placeholder="Hello, my name is..." />
+            <div class="error-message hidden"></div>
+          </div>
+          <button type="submit">Send message</button>
+        </form>
       </div>
     </div>
-    <div class="footer">
-      <div class="ftrlinks">
-        <a href="./index.html">HOME</a>
-        <a href="./project.html">PROJECTS</a>
-        <a href="./about.html">ABOUT</a>
-        <a href="./contact.html">CONTACT</a>
-        <a href="./messages.html">MESSAGES</a>
-      </div>
-      <div class="ftrcontact">
-        jan_kowalski@gmail.com +123 456 789
-        <div class="logo">
-          <span class="capital">ITP</span>ortfolio &#169; 2024
-        </div>
-      </div>
-    </div>
+    <div id="footer-placeholder"></div>
+    <script src="./Script/script.js" type="module"></script>
   </body>
 </html>
