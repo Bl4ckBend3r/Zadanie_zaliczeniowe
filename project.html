@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./Style/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <div class="main">
-      <div class="add_project">
-        <button><span class="plus">&plus;</span>Add project</button>
-    </div>    
-    </div>
-    <div id="projectModal" class="modal" style="display: none">
-      <div class="modal-content">
-        <span class="close-btn" id="closeModal">&times;</span>
-        <h2>Add New Project</h2>
-        <label for="projectTitle">Project title</label>
-        <input
-          type="text"
-          id="projectTitle"
-          placeholder="Enter project title"
-        />
 
-        <label for="technologies">Technologies</label>
-        <input
-          type="text"
-          id="technologies"
-          placeholder="e.g., HTML, CSS, JavaScript"
-        />
+<head>
+  <link rel="stylesheet" href="./Style/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-        <button id="addProjectBtn">Add project</button>
-      </div>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="main">
+    <div class="add_project">
+      <button><span class="plus"><img src="./Photos/plus.png" alt="plus"></span>Add project</button>
     </div>
     <div class="projects"></div>
-    <div id="footer-placeholder"></div>
 
-    <script src="./Script/script.js" type="module"></script>
-  </body>
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <form class="addForms">
+          <div class="input-group">
+            <label for="projectTitle">Project title</label>
+            <input type="text" id="projectTitle" placeholder="Project title" />
+            <span class="error-message hidden">The title must be at least 3 characters long</span>
+            <label for="technologies">Technologies</label>
+            <input type="text" id="technologies" placeholder="e.g., HTML, CSS, JavaScript" />
+            <span class="error-message hidden">Please add some technologies</span>
+          </div>
+          <div class="add_project">
+            <button type="button" id="addProjectBtn">
+              <span class="plus"><img src="./Photos/plus.png" alt="plus" /></span>
+              Add project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+
+  </div>
+  <div id="footer-placeholder"></div>
+
+  <script src="./Script/script.js" type="module"></script>
+</body>
+
 </html>

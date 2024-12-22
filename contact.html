@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./Style/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <div class="main">
-      <div class="contact">
-        <h3>Contact Me</h3>
-        <form id="contact-form">
-          <div class="inputs">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your name" />
-            <div class="error-message hidden"></div>
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="email@example.com" />
-            <div class="error-message hidden"></div>
-            <label for="message">Message:</label>
-            <input type="text" id="message" placeholder="Hello, my name is..." />
-            <div class="error-message hidden"></div>
+
+<head>
+  <link rel="stylesheet" href="./Style/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="main">
+    <div class="contact">
+      <h2>Contact me</h2>
+      <form id="contactForm" novalidate>
+        <div class="inputs">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <span class="error-message hidden">Error message here</span>
           </div>
-          <button type="submit">Send message</button>
-        </form>
-      </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="email@example.com">
+            <span class="error-message hidden">Error message here</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <input id="message" name="message" placeholder="Hello, my name is..."></input>
+          <span class="error-message hidden">Error message here</span>
+        </div>
+        <button type="submit" class="submit">Send message</button>
+      </form>
     </div>
-    <div id="footer-placeholder"></div>
-    <script src="./Script/script.js" type="module"></script>
-  </body>
+  </div>
+  <div id="footer-placeholder" style="margin-top: 200px;"></div>
+  <script src="./Script/script.js" type="module"></script>
+</body>
+
 </html>
