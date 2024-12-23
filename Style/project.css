@@ -20,8 +20,6 @@
   height: 60px;
   padding: 15px 49px 15px 49px;
   gap: 24px;
-
-
 }
 
 .modal-content {
@@ -61,7 +59,7 @@
 }
 
 .input-group input {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -73,8 +71,6 @@
 .error-message {
   font-size: 12px;
   color: #AF0808;
-  margin-top: 5px;
-  display: none;
 }
 
 .error-message.hidden {
@@ -87,15 +83,7 @@
   margin-top: 20px;
 }
 
-.add_project button {
-  padding: 10px 20px;
-}
-
-
-
-button#addProjectBtn {
-  position: absolute;
-  padding: 10px 20px;
+#addProjectBtn{
   margin-top: 40px;
 }
 
@@ -178,6 +166,54 @@ button#addProjectBtn {
 }
 
 .empty-message{
+  position: absolute;
+  align-items: center;
   text-align: center;
-  margin: 0;
+  width: 350px;
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .project {
+    width: 300px;
+    height: 460px;   
+  }
+
+  .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .modal button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .add_project button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .error-message {
+    font-size: 10px;
+  }
+
+  .trash-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+

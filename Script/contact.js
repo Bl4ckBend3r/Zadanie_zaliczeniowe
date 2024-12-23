@@ -1,17 +1,17 @@
+import { showError, hideError, resetErrors } from './error.js';
+
 export function sendMessage() {
   const form = document.querySelector("#contactForm");
   if (!form) {
     console.warn("Form not found on the page. Skipping sendMessage initialization.");
     return;
-}
-
+  }
 
   form.setAttribute("novalidate", "novalidate");
 
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const messageInput = document.getElementById("message");
-
 
   nameInput.addEventListener("input", () => validateName(nameInput));
   emailInput.addEventListener("input", () => validateEmail(emailInput));
@@ -41,7 +41,6 @@ export function sendMessage() {
       resetErrors([nameInput, emailInput, messageInput]); 
     }
   });
-
 
   function validateName(input) {
     const value = input.value.trim();
@@ -78,31 +77,5 @@ export function sendMessage() {
     }
     hideError(input);
     return true;
-  }
-
-
-  function resetErrors(inputs) {
-    inputs.forEach((input) => {
-      hideError(input);
-    });
-  }
-
-
-  function showError(input, message) {
-    const errorElement = input.nextElementSibling;
-    if (errorElement) {
-      errorElement.textContent = message;
-      errorElement.classList.remove("hidden");
-    }
-    input.classList.add("error");
-  }
-
-  function hideError(input) {
-    const errorElement = input.nextElementSibling;
-    if (errorElement) {
-      errorElement.classList.add("hidden");
-      errorElement.textContent = "";
-    }
-    input.classList.remove("error");
   }
 }

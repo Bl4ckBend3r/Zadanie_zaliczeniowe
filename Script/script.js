@@ -4,6 +4,7 @@ import { initTemplate } from "./template.js";
 import { initProjects } from "./project.js";
 import { sendMessage } from './contact.js';
 import { mailBox } from "./message.js";
+import {updateSkill} from "./skillYears.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("DOM content loaded. Initializing...");
@@ -15,25 +16,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       await exportPoject();
       console.log("Projekty załadowane.");
     } else {
-      console.log(
-        "No carousel found on this page. Skipping project initialization."
-      );
+      console.warn("No carousel found on this page. Skipping project initialization.");
     }
 
-    const projectsInitialized = initProjects();
-    if (projectsInitialized) {
-      console.log("Projekty załadowane.");
+    if (!initProjects()) {
+      console.warn("Projects container not found! Skipping project initialization.");
     }
 
     initModal();
-    console.log("Modal zainicjalizowany.");
+    console.log("Modal initialization.");
 
     await initTemplate();
-    console.log("Nawigacja i stopka załadowane.");
+    
 
     sendMessage();
     mailBox();
+
+
+    updateSkill();
   } catch (error) {
     console.error("Błąd podczas inicjalizacji strony:", error);
   }
 });
+
