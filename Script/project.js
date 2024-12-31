@@ -3,36 +3,47 @@ import { restoreDefaults } from "./defaultRestore.js";
 export function initProjects() {
     const projectsContainer = document.querySelector(".projects");
     if (!projectsContainer) {
-      console.warn("Projects container not found! Skipping initialization.");
-      return null;
+        console.warn("Projects container not found! Skipping initialization.");
+        return null;
     }
 
     const defaultProjects = [
-        { title: "Calculator", technologies: ["HTML"] },
-        { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
-        { title: "Calculator Program", technologies: ["JavaScript"] },
-        { title: "Calculator", technologies: ["HTML"] },
-        { title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+        { id: generateId(), title: "Calculator", technologies: ["HTML"] },
+        { id: generateId(), title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
+        { id: generateId(), title: "Calculator Program", technologies: ["JavaScript"] },
+        { id: generateId(), title: "Calculator", technologies: ["HTML"] },
+        { id: generateId(), title: "Non-governmental organization", technologies: ["HTML", "CSS"] },
     ];
 
-    function addProject(title, technologies) {
-        const projects = getProjectsFromLocalStorage();
-        projects.push({ title, technologies });
-        saveProjectsToLocalStorage(projects);
-        loadProjects();
-        console.log(`Project "${title}" added successfully.`);
+    function generateId() {
+        return '_' + Math.random().toString(36).substr(2, 9);
     }
 
-    function removeProject(title) {
+    function addProject(title, technologies) {
         let projects = getProjectsFromLocalStorage();
-        projects = projects.filter((project) => project.title !== title);
+        projects.push({ id: generateId(), title, technologies });
         saveProjectsToLocalStorage(projects);
+        console.log(`Project "${title}" added successfully.`);
         loadProjects();
-        console.log(`Project "${title}" removed successfully.`);
+    }
+
+    function removeProject(id) {
+        let projects = getProjectsFromLocalStorage();
+        const filteredProjects = projects.filter((project) => project.id !== id);
+
+        if (filteredProjects.length !== projects.length) {
+            saveProjectsToLocalStorage(filteredProjects);
+            console.log(`Project with ID "${id}" removed successfully.`);
+            loadProjects();
+        } else {
+            console.warn(`Project with ID "${id}" not found. No action taken.`);
+        }
     }
 
     function getProjectsFromLocalStorage() {
-        return restoreDefaults("projects", defaultProjects);
+        const storedProjects = JSON.parse(localStorage.getItem("projects"));
+        console.log("Retrieved projects from localStorage:", storedProjects);
+        return storedProjects || restoreDefaults("projects", defaultProjects);
     }
 
     function saveProjectsToLocalStorage(projects) {
@@ -54,7 +65,8 @@ export function initProjects() {
 
         const trashIcon = projectElement.querySelector(".trash-icon");
         trashIcon.addEventListener("click", () => {
-            removeProject(project.title);
+            console.log(`Attempting to remove project with ID: ${project.id}`);
+            removeProject(project.id);
         });
 
         return projectElement;
@@ -62,6 +74,8 @@ export function initProjects() {
 
     function loadProjects() {
         const projects = getProjectsFromLocalStorage();
+        console.log("Loading projects:", projects);
+
         projectsContainer.innerHTML = "";
 
         if (projects.length === 0) {
