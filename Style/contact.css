@@ -1,5 +1,6 @@
 .contact {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 90%;
   height: 274px;
   gap: 65px;
   opacity: 0px;

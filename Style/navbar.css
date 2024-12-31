@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: #1f2041;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .navupper {
@@ -12,8 +15,8 @@
   align-items: center;
   width: 100%;
   max-width: fill (1200px);
-  padding: 37px 120px;
-  margin: 0;
+  padding: 37px 150px;
+  margin: 0 auto;
 }
 .logo {
   font-size: 1.5rem;
@@ -30,6 +33,7 @@
 }
 .navbarlinks {
   display: flex;
+  gap: 20px;
   flex-direction: row;
 }
 
@@ -37,7 +41,6 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
-  margin-left: 20px;
   transition: color 0.3s ease;
 }
 
