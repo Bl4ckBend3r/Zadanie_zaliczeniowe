@@ -6,7 +6,6 @@ export function initProjects() {
       console.warn("Projects container not found! Skipping initialization.");
       return null;
     }
-    
 
     const defaultProjects = [
         { title: "Calculator", technologies: ["HTML"] },
@@ -22,6 +21,14 @@ export function initProjects() {
         saveProjectsToLocalStorage(projects);
         loadProjects();
         console.log(`Project "${title}" added successfully.`);
+    }
+
+    function removeProject(title) {
+        let projects = getProjectsFromLocalStorage();
+        projects = projects.filter((project) => project.title !== title);
+        saveProjectsToLocalStorage(projects);
+        loadProjects();
+        console.log(`Project "${title}" removed successfully.`);
     }
 
     function getProjectsFromLocalStorage() {
@@ -44,6 +51,12 @@ export function initProjects() {
                 <img src="./Photos/Trash.png" class="trash-icon" alt="Delete" />
             </div>
         `;
+
+        const trashIcon = projectElement.querySelector(".trash-icon");
+        trashIcon.addEventListener("click", () => {
+            removeProject(project.title);
+        });
+
         return projectElement;
     }
 

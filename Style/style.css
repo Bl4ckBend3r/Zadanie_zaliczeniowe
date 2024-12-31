@@ -24,10 +24,11 @@ body {
   margin: 0 auto;
   display: flex;
   margin-top: 84px;
+  margin-bottom: 84px;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 20px;
+  gap: 50px;
+
 }
 
 .photo_and_text {
@@ -36,12 +37,11 @@ body {
   align-items: center;
   text-align: left;
   max-width: 900px;
-  margin: 0 auto;
-  gap: 04px;
+  gap: 0px;
 }
 h2 {
   color: #1f2041;
-  font-family: League Spartan;
+  font-family: "League Spartan", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 29.44px;
@@ -50,7 +50,7 @@ h2 {
   text-decoration-skip-ink: none;
 }
 p {
-  margin-top: 20px;
+  margin-top: 17px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -64,6 +64,7 @@ p {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+
 }
 
 .text {
@@ -108,7 +109,7 @@ button {
   font-weight: 400;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
   box-shadow: 0px 4px 4px 0px #DDDDDD40;
 

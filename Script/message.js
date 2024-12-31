@@ -37,7 +37,7 @@ export function mailBox() {
                 const messageItem = document.createElement("div");
                 messageItem.classList.add("message-item");
                 messageItem.innerHTML = `
-                    <p><strong>
+                    <p style="margin-bottom: 65px;"><strong>
                     Name: ${msg.name}<br>
                     Email: ${msg.email}<br>
                     Message: ${msg.message}

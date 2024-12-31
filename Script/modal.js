@@ -9,37 +9,27 @@ export function initModal() {
     );
     return;
   }
-  const messagesContainer = document.querySelector("#messages-container");
-  if (!messagesContainer) {
-    console.warn("Messages container not found on the page.");
-    return;
-  }
 
   const modal = document.getElementById("projectModal");
-  const addProjectBtn = document.querySelector(".add_project button");
+  const openModalBtn = document.getElementById("openModalButton");
   const closeModalBtn = document.getElementById("closeModal");
-  const addProjectConfirmBtn = document.getElementById("addProjectBtn");
+  const confirmAddProjectBtn = document.getElementById("addProjectBtn");
   const projectTitleInput = document.getElementById("projectTitle");
   const technologiesInput = document.getElementById("technologies");
 
-  if (!modal || !addProjectBtn || !closeModalBtn || !addProjectConfirmBtn) {
+  if (!modal || !openModalBtn || !closeModalBtn || !confirmAddProjectBtn) {
     console.error("Modal elements not found. Check your HTML.");
     return;
   }
 
-  addProjectBtn.addEventListener("click", () => {
-    modal.classList.add("show");
-    document.body.style.overflow = "hidden";
-    resetErrors([projectTitleInput, technologiesInput]);
-    projectTitleInput.value = "";
-    technologiesInput.value = "";
+  openModalBtn.addEventListener("click", () => {
+    console.log("Add project button clicked");
+    showModal();
   });
 
-  closeModalBtn.addEventListener("click", () => {
-    closeModal();
-  });
+  closeModalBtn.addEventListener("click", closeModal);
 
-  addProjectConfirmBtn.addEventListener("click", () => {
+  confirmAddProjectBtn.addEventListener("click", () => {
     const isTitleValid = validateTitle(projectTitleInput);
     const isTechnologiesValid = validateTechnologies(technologiesInput);
 
@@ -51,6 +41,14 @@ export function initModal() {
       closeModal();
     }
   });
+
+  function showModal() {
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
+    resetErrors([projectTitleInput, technologiesInput]);
+    projectTitleInput.value = "";
+    technologiesInput.value = "";
+  }
 
   function closeModal() {
     modal.classList.remove("show");

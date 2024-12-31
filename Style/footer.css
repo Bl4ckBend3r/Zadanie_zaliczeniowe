@@ -1,25 +1,22 @@
 .footer {
   display: flex;
-  margin-top: 86px;
   justify-content: space-between;
   align-items: center;
   background-color: #1f2041;
   padding: 20px;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  width: 1fr;
-}
-.ftrlinks a.active {
-  color: #ADB6C4;
+  width: 100%;
+  margin-top: auto; 
 }
 
 .ftrlinks {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; 
 }
 
-a {
+.ftrlinks a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
@@ -30,9 +27,17 @@ a {
   color: #adb6c4;
 }
 
+.ftrlinks a.active {
+  color: #ADB6C4;
+}
+
 .ftrcontact {
   text-align: right;
   font-size: 0.9rem;
+}
+
+.ftrcontact a{
+  color: #fff;
 }
 
 .ftrcontact .logo {
@@ -46,14 +51,14 @@ a {
 }
 
 @media (max-width: 768px) {
-  .ftrlinks {
-    display: none; 
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .footer {
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
+  .ftrlinks {
+    display: none; 
   }
 
   .ftrcontact {
@@ -61,24 +66,22 @@ a {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    text-align: left; 
-
+    text-align: left;
   }
 
   .ftrcontact a {
     display: block; 
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .ftrcontact .logo {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 15px;
-    font-size: 30px; 
+    font-size: 30px;
     line-height: 35px;
   }
 
   .logo .capital {
     color: #d4af37;
   }
-
 }

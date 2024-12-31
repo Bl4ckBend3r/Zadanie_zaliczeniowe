@@ -80,8 +80,16 @@
 .add_project {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 0px;
 }
+
+#openModalButton{
+  width: 240px;
+  height: 60px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
 
 #addProjectBtn{
   margin-top: 40px;
@@ -92,10 +100,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  gap: 41px;
+  gap: 84px;
   justify-content: start;
-  margin: 0 auto 84px auto;
-  padding-top: 84px;
+  column-gap: 41px;
+  right: 139px;
+  left: 139px;
 }
 
 .project {
@@ -109,7 +118,7 @@
   color: white;
   font-family: "Roboto", sans-serif;
   position: relative;
-  margin-bottom: 84px;
+
 }
 
 .project h2 {

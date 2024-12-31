@@ -3,7 +3,11 @@
   height: 274px;
   gap: 65px;
   opacity: 0px;
+  margin-bottom: 84px;
+}
 
+.contact .error-message{
+  margin-bottom: -5px;
 }
 
 .contact h3 {
@@ -21,7 +25,7 @@
 }
 
 .input-group {
-  margin-top: 60px;
+  margin-top: 65px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -34,7 +38,7 @@
 
 label {
   font-weight: bold;
-  color: #333;
+  color: #1F2041;
 }
 
 input {
@@ -49,15 +53,20 @@ input:focus {
   outline: none;
 }
 
-.submit {
-  display: flex; 
-  margin: 65px auto; 
-  justify-content: center; 
-  align-items: center;
+.submit {  
   width: 240px;
   height: 60px;
+  display: block; 
+  margin: 54px auto; 
+  justify-content: center; 
+  align-items: center;
+  padding: 15px 49px 15px 49px;
   box-shadow: 0px 4px 4px 0px #00000040;
+  margin-bottom: 84px;
 }
+
+
+
 @media (max-width: 768px) {
   .contact {
     width: 100%;

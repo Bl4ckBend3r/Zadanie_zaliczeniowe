@@ -3,12 +3,12 @@
   grid-template-columns: repeat(4, 1fr);
   width: 958px;
   height: 226px;
-  padding: 0px;
-  gap: 0px;
+  padding: 20px;
+  gap: 24px;
   opacity: 0px;
   margin: 0 auto;
 }
-.skills{
+.skills {
   margin-top: 40px;
 }
 
@@ -61,24 +61,24 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 1000px;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 41px;
   overflow: hidden;
   justify-content: center;
-  width: 100%;
+  max-width: 1162px;
+  margin-bottom: 65px;
 }
 
 .carousel-controls {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  gap: 55px;
+  margin-top: 0px;
+  gap: 50px;
 }
 
 .carousel-control {
@@ -88,11 +88,20 @@
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.carousel-control.prev::after {
+  content: "←";
   font-size: 1.5rem;
 }
 
+.carousel-control.next::after {
+  content: "→";
+  font-size: 1.5rem;
+}
 .hidden {
   display: none !important;
 }
@@ -105,24 +114,37 @@
   .skills_list {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    width: 90%; 
+    width: 90%;
     margin: 0 auto;
   }
   .skill {
     gap: 10px;
   }
   .carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 120px;
-    width: 95%; 
+    width: 95%;
   }
   .carousel {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
+
   .carousel-control {
     padding: 5px 10px;
   }
+  .carousel-control.prev::after {
+    content: "↑"; 
+  }
+
+  .carousel-control.next::after {
+    content: "↓";
+  }
+
   .about {
     text-align: center;
     margin: 0 auto;
@@ -154,6 +176,5 @@
 
   .skill p {
     font-size: 0.7rem;
-  
-}
+  }
 }

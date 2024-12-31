@@ -1,20 +1,65 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2041;
 }
 
+.navupper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: fill (1200px);
+  padding: 37px 120px;
+  margin: 0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #adb6c4;
+}
+
+.navbar .logo {
+  font-size: 32px;
+}
+
+.logo .capital {
+  color: #d4af37;
+}
+.navbarlinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarlinks a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbarlinks a:hover {
+  color: #adb6c4;
+}
+
+.navbarlinks a.active {
+  color: #adb6c4;
+}
 .hamburger {
   width: 50px;
   height: 50px;
   display: none;
   flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
 }
 
 .hamburger div {
-  width: 25px;
-  height: 3px;
+  width: 50px;
+  height: 6px;
   background-color: #ffffff;
   margin: 3px;
   border-radius: 5px;
@@ -24,92 +69,57 @@
 .hamburger.active div {
   background-color: #d4af37;
 }
-
-.navbarlinks {
-  display: flex;
-  flex-direction: row;
-}
-.navbarlinks a.active {
-  color: #ADB6C4;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  background-color: #1f2041;
-}
-
-.navupper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  margin-left: 150px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #adb6c4;
-}
-
-.logo .capital {
-  color: #d4af37;
-}
-
-.navbarlinks a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-left: 20px;
-  transition: color 0.3s ease;
-}
-
-.navbarlinks a:hover {
-  color: #adb6c4;
-}
-
 .titlename {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 100px;
+  padding-bottom: 179px;
 }
 
 .titlename h1 {
   font-family: "League Gothic", sans-serif;
-  font-size: 4rem;
-  letter-spacing: 0.1em;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 115.2px;
   color: #ffffff;
 }
 
 .titlename span {
   display: block;
   font-family: "League Spartan", sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.2em;
-  color: #adb6c4;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 29.44px;
+  letter-spacing: 0.36em;
+  color: #ffffff;
 }
-
 @media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
   .hamburger {
     display: flex;
     margin-right: 10px;
   }
 
+  .hamburger div {
+    width: 40px;
+    height: 5px;
+  }
+
   .navbarlinks {
     display: none;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     width: 100%;
     background-color: #1f2041;
     position: absolute;
-    top: 60px;
+    top: 118px;
     left: 0;
     z-index: 1000;
+    border-bottom: 1px solid #f9f9f9;
+    border-top: 1px solid #f9f9f9;
+    padding-left: 10px;
   }
 
   .navbarlinks.active {
@@ -119,37 +129,54 @@
   .navbarlinks a {
     margin: 10px 0;
   }
+
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #adb6c4;
     position: relative;
-}
+  }
 
   .titlename h1 {
     font-size: 6.5rem;
   }
 
   .titlename span {
-    font-size: 3.8rem;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 29.44px;
+    letter-spacing: 0.36em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
-  
-  .navbar {
-    padding: 10px;
+
+  .navupper {
+    height: 54px;
+    left: 0;
+    padding: 0;
   }
+
   .navupper .logo {
-    font-size: 1.2rem; 
-    margin-left: 10px; 
+    font-size: 1.2rem;
     visibility: hidden;
   }
 
   .navupper .logo .capital {
-    font-size: 3.4rem; 
+    width: 56px;
+    height: 41px;
+    top: 5px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42.19px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
     visibility: visible;
   }
 
   .logo::after {
     font-size: 3.2rem;
-    margin-left: 3px; 
+    margin-left: 3px;
   }
 }
