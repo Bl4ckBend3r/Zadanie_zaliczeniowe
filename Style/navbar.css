@@ -73,6 +73,7 @@
   background-color: #d4af37;
 }
 .titlename {
+  width: 534px;
   text-align: center;
   margin-top: 100px;
   padding-bottom: 179px;
@@ -89,6 +90,7 @@
 .titlename span {
   display: block;
   font-family: "League Spartan", sans-serif;
+  word-break: break-word;
   font-size: 32px;
   font-weight: 400;
   line-height: 29.44px;
