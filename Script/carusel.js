@@ -32,9 +32,6 @@ export function exportPoject() {
     const renderProjects = (projects) => {
         if (!Array.isArray(projects) || projects.length === 0) {
             console.log("No projects to display.");
-            carousel.innerHTML = `
-                <h2 class="empty-message">There are no projects to display.</h2>
-            `;
             prevBtn.classList.add("hidden");
             nextBtn.classList.add("hidden");
             return;
