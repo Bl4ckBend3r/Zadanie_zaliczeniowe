@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +19,13 @@ body {
   color: #333;
   max-width: 100%;
   line-height: 1.6;
-  overflow-x: hidden; 
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 
 .main {
   max-width: 1100px;
@@ -31,54 +36,49 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-
 }
 
 .photo_and_text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   max-width: 900px;
-  gap: 0px;
+  margin: 0 auto;
+  gap: 20px;
 }
-h2 {
-  color: #1f2041;
-  font-family: "League Spartan", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 29.44px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-p {
-  margin-top: 17px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.75px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #1f2041;
-}
+
 .photo img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-
+  margin-bottom: 20px;
 }
 
 .text {
-  margin-top: 65px;
+  margin-top: 20px;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 18.75px;
+  line-height: 1.5;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+}
+
+h2 {
+  color: #1f2041;
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+p {
+  margin-top: 17px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  
+  color: #1f2041;
 }
 
 input {
@@ -89,7 +89,7 @@ input {
   border: none;
   border-bottom: 2px solid #adb6c4;
   background-color: transparent;
-  color: #1F2041;
+  color: #1f2041;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
@@ -100,7 +100,7 @@ input::placeholder {
 }
 
 input:focus {
-  border-bottom: 2px solid 7a8088;
+  border-bottom: 2px solid #7a8088;
 }
 
 button {
@@ -114,12 +114,34 @@ button {
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  box-shadow: 0px 4px 4px 0px #DDDDDD40;
-
+  box-shadow: 0px 4px 4px 0px #dddddd40;
 }
 
 button:hover {
   background-color: #7a8088;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 20px;
+  }
+
+  .photo_and_text {
+    gap: 15px;
+    width: 1fr;
+  }
+
+  .photo img {
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -155,5 +177,36 @@ button:hover {
     font-size: 14px;
     line-height: 1.5;
   }
+}
 
+@media (max-width: 480px) {
+  .main {
+    padding: 5px;
+  }
+
+  .photo img {
+    border-radius: 5px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 11px;
+  }
 }

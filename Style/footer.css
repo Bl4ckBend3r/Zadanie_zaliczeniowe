@@ -8,13 +8,13 @@
   font-family: "Roboto", sans-serif;
   width: 100%;
   position: relative;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .ftrlinks {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .ftrlinks a {
@@ -29,7 +29,7 @@
 }
 
 .ftrlinks a.active {
-  color: #ADB6C4;
+  color: #adb6c4;
 }
 
 .ftrcontact {
@@ -37,11 +37,19 @@
   font-size: 0.9rem;
 }
 
-.ftrcontact a{
+.ftrcontact a {
+  text-decoration: none;
   color: #fff;
 }
 
 .ftrcontact .logo {
+  font-family: Roboto;
+  font-size: 27px !important;
+  font-weight: 700;
+  line-height: 31.64px !important;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   margin-top: 10px;
   font-size: 1rem;
   color: #adb6c4;
@@ -52,6 +60,10 @@
 }
 
 @media (max-width: 768px) {
+  footer {
+    height: 232px;
+    bottom: 0;
+  }
   .footer {
     flex-direction: column;
     align-items: center;
@@ -59,7 +71,7 @@
   }
 
   .ftrlinks {
-    display: none; 
+    display: none;
   }
 
   .ftrcontact {
@@ -71,7 +83,7 @@
   }
 
   .ftrcontact a {
-    display: block; 
+    display: block;
     font-size: 14px;
   }
 

@@ -1,4 +1,4 @@
-.navbar {
+nav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +13,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: fill (1200px);
-  padding: 37px 150px;
+  min-width: 100%;
+  width: 90vw;
+  max-width: 1200px;
+  padding: 20px 50px;
   margin: 0 auto;
 }
 .logo {
@@ -73,7 +74,9 @@
   background-color: #d4af37;
 }
 .titlename {
-  width: 534px;
+  margin-left: 25%;
+  width: 100%;
+  max-width: 534px;
   text-align: center;
   margin-top: 100px;
   padding-bottom: 179px;
@@ -97,6 +100,12 @@
   letter-spacing: 0.36em;
   color: #ffffff;
 }
+@media (max-width: 1024px){
+  .titlename{
+    margin-left: 20%;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 10px;
@@ -141,6 +150,9 @@
     color: #adb6c4;
     position: relative;
   }
+  .titlename{
+    margin-left: 10%;
+  }
 
   .titlename h1 {
     font-size: 6.5rem;
@@ -183,5 +195,10 @@
   .logo::after {
     font-size: 3.2rem;
     margin-left: 3px;
+  }
+}
+@media (max-width: 425px){
+  .titlename{
+    margin-left: 0%;
   }
 }
