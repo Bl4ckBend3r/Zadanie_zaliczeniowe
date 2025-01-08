@@ -14,6 +14,7 @@
 .ftrlinks {
   display: flex;
   flex-direction: column;
+  margin-left: 7.5rem;
   gap: 10px;
 }
 
@@ -33,6 +34,7 @@
 }
 
 .ftrcontact {
+  margin-right: 7.5rem;
   text-align: right;
   font-size: 0.9rem;
 }
